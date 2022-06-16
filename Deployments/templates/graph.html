@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Title Page-->
+    <title>H8 FP4 - Graphs</title>
+
+    <!-- Icons font CSS-->
+    <link href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url_for('static', filename='vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url_for('static', filename='vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+
+</head>
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Grafik</h2>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-km-tab" data-bs-toggle="tab" data-bs-target="#nav-km" type="button" role="tab" aria-controls="nav-km" aria-selected="true">K-Means</button>
+
+                            <button class="nav-link" id="nav-pca-tab" data-bs-toggle="tab" data-bs-target="#nav-pca" type="button" role="tab" aria-controls="nav-pca" aria-selected="false">PCA</button>
+
+                            <button class="nav-link" id="nav-umap-tab" data-bs-toggle="tab" data-bs-target="#nav-umap" type="button" role="tab" aria-controls="nav-umap" aria-selected="false">UMAP</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active p-3" id="nav-km" role="tabpanel" aria-labelledby="nav-km-tab">
+                            <h2>K-Means</h2>
+                            <br>
+                            <h4><b>Transaksi Pembelian vs Pembelian</b></h4>
+                            <img src="../static/images/km-1.png" alt="Transaksi Pembelian vs Pembelian" width="100%">
+                            <br>
+                            <h4><b>Saldo Akun vs Pembelian</b></h4>
+                            <img src="../static/images/km-2.png" alt="Saldo Akun vs Pembelian" width="100%">
+                            <br>
+                            <h4><b>Frekuensi Pembelian vs Transaksi Pembelian</b></h4>
+                            <img src="../static/images/km-3.png" alt="Frekuensi Pembelian vs Transaksi Pembelian" width="100%">
+                            <br>
+                            <h4><b>Batas Kredit Akun vs Pembelian per Akun</b></h4>
+                            <img src="../static/images/km-4.png" alt="Batas Kredit Akun vs Pembelian per Akun" width="100%">
+                        </div>
+                    
+                        <div class="tab-pane fade p-3" id="nav-pca" role="tabpanel" aria-labelledby="nav-pca-tab">
+                            <h2>PCA</h2>
+                            <br>
+                            <h4><b>PCA Component 1 vs PCA Component 2</b></h4>
+                            <img src="../static/images/pca-12.png" alt="PCA Component 1 vs PCA Component 2" width="100%">
+                            <br>
+                            <h4><b>PCA Component 2 vs PCA Component 23</b></h4>
+                            <img src="../static/images/pca-23.png" alt="PCA Component 2 vs PCA Component 3" width="100%">
+                            <br>
+                            <h4><b>PCA Component 3 vs PCA Component 4</b></h4>
+                            <img src="../static/images/pca-34.png" alt="PCA Component 3 vs PCA Component 4" width="100%">
+                            <br>
+                            <h4><b>PCA Component 4 vs PCA Component 5</b></h4>
+                            <img src="../static/images/pca-45.png" alt="PCA Component 4 vs PCA Component 5" width="100%">
+                            <br>
+                            <h4><b>PCA Component 5 vs PCA Component 6</b></h4>
+                            <img src="../static/images/pca-56.png" alt="PCA Component 5 vs PCA Component 6" width="100%">
+                            <br>
+                            <h4><b>PCA Component 6 vs PCA Component 7</b></h4>
+                            <img src="../static/images/pca-67.png" alt="PCA Component 6 vs PCA Component 7" width="100%">
+                            <br>
+                            <h4><b>PCA Component 1 vs PCA Component 6</b></h4>
+                            <img src="../static/images/pca-16.png" alt="PCA Component 1 vs PCA Component 6" width="100%">
+                            <br>
+                            <h4><b>PCA Component 2 vs PCA Component 5</b></h4>
+                            <img src="../static/images/pca-25.png" alt="PCA Component 2 vs PCA Component 5" width="100%">
+                            <br>
+                            <h4><b>PCA Component 2 vs PCA Component 7</b></h4>
+                            <img src="../static/images/pca-27.png" alt="PCA Component 2 vs PCA Component 7" width="100%">
+                        </div>
+                
+                        <div class="tab-pane fade p-3" id="nav-umap" role="tabpanel" aria-labelledby="nav-umap-tab">
+                            <h2>UMAP</h2>
+                            <br>
+                            <h4><b>Penarikan Tunai vs Pembelian Angsuran</b></h4>
+                            <img src="../static/images/umap-1.png" alt="Penarikan Tunai vs Pembelian Angsuran" width="100%">
+                            <br>
+                            <h4><b>Pembelian vs Pembayaran</b></h4>
+                            <img src="../static/images/umap-2.png" alt="Pembelian vs Pembayaran" width="100%">
+                            <br>
+                            <h4><b>Pembelian Satu Kali (<i>One Off</i>) vs Batas Kredit</b></h4>
+                            <img src="../static/images/umap-3.png" alt="Pembelian Satu Kali (One Off) vs Batas Kredit" width="100%">
+                            <br>
+                            <h4><b>Saldo vs Minimal / Minimum Pembayaran</b></h4>
+                            <img src="../static/images/umap-4.png" alt="Saldo vs Minimal / Minimum Pembayaran" width="100%">
+                            <br>
+                            <h4><b>Pengamatan Per Segmen</b></h4>
+                            <img src="../static/images/umap-5.png" alt="Pengamatan Per Segmen" width="100%">
+                        </div>
+                    </div>
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item"><a class="page-link" href="/">Main Page</a></li>
+                          <li class="page-item"><a class="page-link" href="/about">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Jquery JS-->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <!-- Vendor JS-->
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+    
+    <!-- Main JS-->
+    <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>

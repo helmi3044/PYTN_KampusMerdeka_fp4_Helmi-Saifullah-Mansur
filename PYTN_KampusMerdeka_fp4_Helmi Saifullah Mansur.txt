@@ -1,0 +1,15 @@
+Nama : Helmi Saifullah Mansur
+Kode Peserta : PYTN-KS04-010
+Batch 004
+
+Link Repository : 
+- https://github.com/helmi3044/PYTN_KampusMerdeka_fp4_Helmi-Saifullah-Mansur
+- https://github.com/helmi3044/finalproject4
+
+Link Deploy :
+- https://h8-clustering-fp4.herokuapp.com/
+- https://helmi3044.github.io/ClusteringCreditCardUsers/
+
+Anggota Kelompok :
+- Helmi Saifullah Mansur (PYTN-KS04-010)
+- Kezario M. Anaqi (PYTN-KS04-005)
